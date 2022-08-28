@@ -18,7 +18,7 @@ Mr Pickles says "meow"
 
 ### prerequisites
  - Php version 8.1
- - phpunit
+ - phpunit 8.5.2
 
 ---
 
