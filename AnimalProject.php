@@ -6,26 +6,29 @@
     require('Cat.php');
     require('Dog.php');
     require('Cow.php');
+    require('NewAnimal.php');
 
+for($i=1;$i<count($argv);$i += 2) {
 
-
-    switch($argv[2]){
+    switch ($argv[$i + 1]) {
         case 'cat':
-            $cat=new Cat($argv[1]);
+            $cat = new Cat($argv[$i]);
             print($cat->greeting());
             break;
         case 'dog':
-            $dog=new Dog($argv[1]);
+            $dog = new Dog($argv[$i]);
             print($dog->greeting());
             break;
         case 'cow':
-            $cow=new Cow($argv[1]);
+            $cow = new Cow($argv[$i]);
             print($cow->greeting());
             break;
         default:
-            print(ucfirst($argv[2])."s  are not real");
+            $newAnimal = new NewAnimal($argv[$i]);
+            print($newAnimal->greeting());
     }
-print("\n");
+    print("\n");
+}
 
 
 

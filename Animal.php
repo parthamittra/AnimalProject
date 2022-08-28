@@ -14,27 +14,33 @@ class Animal implements Creature{
         $this->weight=$weight;
     }
 
-    public function getName(){
+    public function getName() : string{
             return $this->name;
 
     }
-    public function getCry(){
+    public function getCry() : string{
             return $this->cry;
 
     }
-    public function getWeight(){
+    public function getWeight() : string{
             return $this->weight;
 
     }
-    public function setWeight($weight){
+    public function setWeight($weight) : void{
         $this->weight=$weight;
 
     }
-    public function setName($name){
+    public function setName($name): void{
         $this->name=$name;
 
 
     }
+
+    public function __sleep(){
+        return ['name','cry'];
+
+    }
+
 
     public function greeting(): string
     {
